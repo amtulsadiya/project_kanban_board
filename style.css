@@ -1,0 +1,163 @@
+/* -------- PAGE -------- */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f8fafc;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* -------- FORM -------- */
+#taskForm {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#taskForm input,
+#taskForm select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+#taskForm input:focus,
+#taskForm select:focus {
+  border-color: #4f46e5;
+}
+
+#taskForm button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#taskForm button:hover {
+  background: #4338ca;
+}
+
+/* -------- BOARD -------- */
+.board {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  width: 30%;
+  background: #e5e7eb;
+  padding: 12px;
+  border-radius: 10px;
+  min-height: 300px;
+}
+
+.column h2 {
+  margin-bottom: 10px;
+}
+
+/* -------- CARD -------- */
+.card {
+  background: white;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border-left: 6px solid gray;
+  cursor: grab;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  font-size: 15px;
+  line-height: 1.5;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+/* -------- PRIORITY COLORS -------- */
+.card.low {
+  border-left-color: green;
+  background: #ecfdf5;
+}
+
+.card.medium {
+  border-left-color: orange;
+  background: #fff7ed;
+}
+
+.card.high {
+  border-left-color: red;
+  background: #fef2f2;
+}
+
+/* -------- CARD LAYOUT -------- */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-text {
+  max-width: 70%;
+}
+
+.card-text h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card-text p {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.card-text small {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* -------- BUTTONS -------- */
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-actions button {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Edit */
+.edit-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #2563eb;
+}
+
+/* Delete */
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}

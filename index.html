@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kanban Board - Sadiya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Kanban Board</h1>
+
+<form id="taskForm">
+<input type="text" id="title" placeholder="Task title" required style="flex:1">
+<input type="text" id="desc" placeholder="Description" style="flex:1">
+  <select id="priority">
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+  </select>
+  <button type="submit">Add Task</button>
+</form>
+
+<div class="board">
+  <div class="column" data-column="todo">
+    <h2>To Do</h2>
+    <div class="task-list"></div>
+  </div>
+
+  <div class="column" data-column="inprogress">
+    <h2>In Progress</h2>
+    <div class="task-list"></div>
+  </div>
+
+  <div class="column" data-column="done">
+    <h2>Done</h2>
+    <div class="task-list"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
