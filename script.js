@@ -78,9 +78,21 @@ function deleteTask(id) {
 
 /* ---------------- DRAG DROP ---------------- */
 document.querySelectorAll(".column").forEach(column => {
-  column.addEventListener("dragover", e => e.preventDefault());
+  // when dragging over
+  column.addEventListener("dragover", e => {
+    e.preventDefault();
+    column.classList.add("drag-over");
+  });
 
+  // when leaving column
+  column.addEventListener("dragleave", () => {
+    column.classList.remove("drag-over");
+  });
+
+  // when dropped
   column.addEventListener("drop", () => {
+    column.classList.remove("drag-over");
+
     const newColumn = column.dataset.column;
 
     tasks = tasks.map(task =>
@@ -91,7 +103,6 @@ document.querySelectorAll(".column").forEach(column => {
     renderTasks();
   });
 });
-
 /* ---------------- FORM ---------------- */
 document.getElementById("taskForm").addEventListener("submit", function(e) {
   e.preventDefault();
